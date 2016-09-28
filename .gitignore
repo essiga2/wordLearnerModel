@@ -48,4 +48,6 @@ Temporary Items
 
 # Project information files
 .idea
+out
 wordLearnerModel.iml
+
