@@ -1,4 +1,4 @@
-package VocabularyInterfaces;
+package vocabularyInterfaces;
 
 /**
  * Created by EmerenciaAmarylla on 9/28/2016.

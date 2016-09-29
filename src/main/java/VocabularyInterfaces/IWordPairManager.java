@@ -1,4 +1,4 @@
-package VocabularyInterfaces;
+package vocabularyInterfaces;
 
 import java.util.ArrayList;
 
