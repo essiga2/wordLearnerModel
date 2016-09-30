@@ -10,9 +10,13 @@ import java.util.Set;
  */
 public interface IVocabulary {
 
-    public void createSubVocabulary(FileInputStream excelFile);
+    public void createSubVocabulary(FileInputStream excelFile) throws Exception;
 
-    public void deleteSubVocabulary(Long[] IDs, String language1, String language2);
+    public void deleteSubVocabulares(Long[] IDs, String language1, String language2);
+
+    public IWordPairManager getWordPaires(Long[] IDs, String fromLanguage, String toLanguage) throws Exception;
+
+    public IWordPairManager geHardWordPaires(Long[] IDs, String fromLanguage, String toLanguage, double percent) throws Exception;
 
     public Set<String> getLanguages();
 

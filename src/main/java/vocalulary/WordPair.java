@@ -7,17 +7,17 @@ import vocabularyInterfaces.IWordPair;
  */
 public class WordPair implements IWordPair {
     private WordIDPair wordIDPair;
-    private String fromLanguage;
-    private String toLanguage;
+    private String fromWord;
+    private String toWord;
 
-    public WordPair(String from, String to, WordIDPair _wordIDPair) {
+    public WordPair(String _fromWord, String _toWord, WordIDPair _wordIDPair) {
         wordIDPair = _wordIDPair;
-        fromLanguage = from;
-        toLanguage = to;
+        fromWord = _fromWord;
+        toWord = _toWord;
     }
 
     public String[] getWords() {
-        return new String[]{fromLanguage, toLanguage};
+        return new String[]{fromWord, toWord};
     }
 
     public int[] getStatistics() {

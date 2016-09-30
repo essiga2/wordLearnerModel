@@ -8,5 +8,7 @@ import java.util.ArrayList;
 public interface IWordPairManager {
     public IWordPair getNext();
 
+    public boolean hasNext();
+
     public ArrayList<IWordPair> getAll();
 }

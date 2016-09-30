@@ -7,10 +7,25 @@ import java.util.HashMap;
  * Created by EmerenciaAmarylla on 9/29/2016.
  */
 public class SubVocabulary {
-    private static HashMap<Long,SubVocabulary> IDlanguageHashMap = new HashMap<Long, SubVocabulary>();
-    private static HashMap<String, Long> nameIdHashMap = new HashMap<String, Long>();
-    private static long nextID = 0;
-    protected static void createSubVocabulary(String language1, String language2, ArrayList<String[]> wordPaires){
 
+    private String name;
+    private Language[] languages;
+
+
+
+    private ArrayList<WordIDPair> paires = new ArrayList<WordIDPair>();
+
+    public SubVocabulary(String _name,Language[] _languages, ArrayList<String[]> wordPaires) throws Exception {
+        name = _name;
+        languages = _languages;
+
+        for(String[] pair: wordPaires){
+            paires.add(new WordIDPair(languages[0].getIDByWord(pair[0]), languages[1].getIDByWord(pair[1])));
+        }
     }
+
+    public ArrayList<WordIDPair> getPaires() {
+        return paires;
+    }
+
 }
